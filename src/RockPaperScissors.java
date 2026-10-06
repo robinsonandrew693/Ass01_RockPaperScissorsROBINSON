@@ -7,7 +7,7 @@ public class RockPaperScissors {
         String playerOneChoice;
         String playerTwoChoice;
         String userPlayAgain;
-        boolean playAgain = false;
+        boolean playAgain = true;
         boolean playerOneValid = false;
         boolean playerTwoValid = false;
         boolean validPlayAgain = false;
@@ -62,17 +62,18 @@ public class RockPaperScissors {
                 userPlayAgain = scan.nextLine();
                 if (userPlayAgain.equalsIgnoreCase("N")) {
                     validPlayAgain = true;
-                    playAgain = true;
+                    playAgain = false;
                 }
                 else if (userPlayAgain.equalsIgnoreCase("Y")) {
                     validPlayAgain = true;
                 }
                 else {
                     System.out.println("You must input Y or N. Please try again.");
+                    validPlayAgain = false;
                 }
             } while (!validPlayAgain);
 
-        } while (!playAgain);
+        } while (playAgain);
 
 
     }
