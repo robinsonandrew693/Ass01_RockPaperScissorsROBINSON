@@ -21,6 +21,7 @@ public class RockPaperScissors {
                 }
                 else {
                     System.out.println("You inputted an invalid option. Please try again.");
+                    playerOneValid = false;
                 }
             } while (!playerOneValid);
 
@@ -32,6 +33,7 @@ public class RockPaperScissors {
                 }
                 else {
                     System.out.println("You inputted an invalid option. Please try again.");
+                    playerTwoValid = false;
                 }
             } while (!playerTwoValid);
 
